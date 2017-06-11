@@ -54,7 +54,7 @@
 							    <option value="Masculino">Masculino</option>
 							    <option value="Feminino">Feminino</option>
 							  </select>
-							  <input type="text" name="sex" value="{{ Auth::user()->sex }}"/>
+							  <input type="text" id="sex" name="sex" value="{{ Auth::user()->sex }}"/>
 							</div>
 						</li>
 						
@@ -81,6 +81,11 @@
 						<li class="list-group-item">
 							<label for="uf" class="col-sm-6 text-right">Unidade Federativa:</label>
 							<input type="text" name="uf" id="uf" value="{{ Auth::user()->uf }}" class="col-sm-6" required/>
+						</li>
+
+						<li class="list-group-item">
+							<strong class="col-sm-6 text-right">Senha:</strong>
+							<a href="/user/edit/password" class="btn btn-warning">Mudar Senha</a>
 						</li>
 
 						<li class="list-group-item">

@@ -20,13 +20,14 @@ Route::group(['middleware' => 'guest'], function () {
 Route::get('/user', function () {
 	return redirect()->home();
 });
-Route::get('/home', 'AppController@index')->name('home');
-Route::get('/user/edit', 'AppController@edit');
-Route::patch('/user', 'AppController@update');
+Route::get('/home', 'UserController@index')->name('home');
+Route::get('/user/edit', 'UserController@edit');
+Route::get('/user/edit/password', 'UserController@passwordReset');
+Route::patch('/user', 'UserController@update');
 Route::get('/user/delete', function () {
 	return view ('users.delete');
 });
-Route::delete('/user', 'AppController@destroy');
+Route::delete('/user', 'UserController@destroy');
 
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
