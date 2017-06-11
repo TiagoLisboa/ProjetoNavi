@@ -13,6 +13,11 @@ class AppController extends Controller
 
     public function index ()
     {
-    	return view ('home');
+    	return view ('users.index');
+    }
+
+    public function edit ()
+    {
+    	return view ('users.edit');
     }
 }

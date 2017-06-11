@@ -8,10 +8,21 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Font Awesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
 .main-header {
 	padding: 15px 50px;
 }
 
 .nav-tabs {
 	border-bottom: none;
+}
+
+.select-editable { position:relative; background-color:white;  width:90%; height:20px; }
+.select-editable select { position:absolute; top:0px; left:15px; border:none; width:90%; height:20px;}
+.select-editable input { position:absolute; top:0px;  width:80%; padding:1px; border:none; }
+.select-editable select:focus, .select-editable input:focus { outline:none; }
+input {
+	border: none;
 }

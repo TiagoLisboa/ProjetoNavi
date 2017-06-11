@@ -15,7 +15,8 @@ Route::get('/', function () {
 	return redirect()->home();
 });
 
-Route::get('/home', 'AppController@index')->name('home');
+Route::get('/user', 'AppController@index')->name('home');
+Route::get('/user/edit', 'AppController@edit');
 
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
