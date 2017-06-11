@@ -85,7 +85,7 @@
 
 						<li class="list-group-item">
 							<strong class="col-sm-6 text-right">Senha:</strong>
-							<a href="/user/edit/password" class="btn btn-warning">Mudar Senha</a>
+							<a href="/auth/password/reset" class="btn btn-warning">Mudar Senha</a>
 						</li>
 
 						<li class="list-group-item">

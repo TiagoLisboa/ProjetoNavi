@@ -11,6 +11,9 @@
 |
 */
 
+
+Route::auth();
+
 Route::group(['middleware' => 'guest'], function () {
 	Route::get('/', function () {
 		return view ('home');
@@ -22,7 +25,7 @@ Route::get('/user', function () {
 });
 Route::get('/home', 'UserController@index')->name('home');
 Route::get('/user/edit', 'UserController@edit');
-Route::get('/user/edit/password', 'UserController@passwordReset');
+Route::get('/user/edit/password', 'Auth\ResetPasswordController@showResetForm');
 Route::patch('/user', 'UserController@update');
 Route::get('/user/delete', function () {
 	return view ('users.delete');
@@ -35,3 +38,6 @@ Route::get('/logout', 'SessionsController@destroy');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
+
+Route::get('auth/password/reset', 'Auth\PasswordController@getResetAuthenticatedView');
+Route::post('auth/password/reset', 'Auth\PasswordController@resetAuthenticated');
