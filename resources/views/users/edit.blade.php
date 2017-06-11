@@ -13,6 +13,7 @@
     			<form action="/user" method="POST">
     				{{ csrf_field() }}
     				{{ method_field('PATCH') }}
+    				<input type="hidden" value="{{ Auth::user()->id }}" name="id">
 	    			<ul class="list-group">
 						<li class="list-group-item">
 							<label for="name" class="col-sm-6 text-right">Nome:</label> 

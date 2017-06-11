@@ -7,6 +7,11 @@ use App\User;
 
 class RegistrationController extends Controller
 {
+    public function __construct ()
+    {
+        $this->middleware('guest');
+    }
+
     // Create -> registration view
     public function create ()
     {
