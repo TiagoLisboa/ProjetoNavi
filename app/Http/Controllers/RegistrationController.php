@@ -53,7 +53,7 @@ class RegistrationController extends Controller
 
       auth()->login($user);
 
-      return redirect()->home();
+      return redirect()->route('dash');
     }
 
 

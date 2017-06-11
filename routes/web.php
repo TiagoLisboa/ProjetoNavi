@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-	return view ('home');
-})->name('home');
+Route::group(['middleware' => 'guest'], function () {
+	Route::get('/', function () {
+		return view ('home');
+	})->name('home');
+});
 
 Route::get('/user', 'AppController@index')->name('dash');
 Route::get('/user/edit', 'AppController@edit');

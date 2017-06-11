@@ -65,5 +65,7 @@ class AppController extends Controller
         $user->delete();
         
         auth()->logout();
+        
+        return redirect()->home();
     }
 }
