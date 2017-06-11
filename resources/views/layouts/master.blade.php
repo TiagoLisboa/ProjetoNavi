@@ -11,6 +11,7 @@
     <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>
+	@include ('layouts.nav')
 
 	<div class="container">
 		<div class="row">
