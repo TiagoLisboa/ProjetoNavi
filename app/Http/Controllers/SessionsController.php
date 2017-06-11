@@ -10,7 +10,7 @@ class SessionsController extends Controller
 	{
 		$this->middleware('guest', ['except' => 'destroy']);
 	}
-	
+
     // Create -> open login view
     public function create ()
     {
@@ -30,5 +30,10 @@ class SessionsController extends Controller
     }
 
     // Destroy -> logout
-    
+    public function destroy ()
+	{
+		auth()->logout();
+
+		return redirect()->home();
+	}
 }
