@@ -26,7 +26,7 @@ class SessionsController extends Controller
 	      ]);
 	    }
 
-	    return redirect()->route('dash');;
+	    return redirect()->home();;
     }
 
     // Destroy -> logout
@@ -34,6 +34,6 @@ class SessionsController extends Controller
 	{
 		auth()->logout();
 
-		return redirect()->home();
+		return redirect()->route('welcome');
 	}
 }

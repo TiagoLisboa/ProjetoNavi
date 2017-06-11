@@ -14,10 +14,13 @@
 Route::group(['middleware' => 'guest'], function () {
 	Route::get('/', function () {
 		return view ('home');
-	})->name('home');
+	})->name('welcome');
 });
 
-Route::get('/user', 'AppController@index')->name('dash');
+Route::get('/user', function () {
+	return redirect()->home();
+});
+Route::get('/home', 'AppController@index')->name('home');
 Route::get('/user/edit', 'AppController@edit');
 Route::patch('/user', 'AppController@update');
 Route::get('/user/delete', function () {

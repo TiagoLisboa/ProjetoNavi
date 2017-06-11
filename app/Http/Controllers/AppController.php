@@ -56,7 +56,7 @@ class AppController extends Controller
             , 'cep' => request('cep')
             ]);
 
-      return redirect()->route('dash');
+      return redirect()->home();
     }
 
     public function destroy ()
@@ -65,7 +65,7 @@ class AppController extends Controller
         $user->delete();
         
         auth()->logout();
-        
-        return redirect()->home();
+
+        return redirect()->route('welcome');
     }
 }
