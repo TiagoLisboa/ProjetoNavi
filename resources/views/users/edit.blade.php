@@ -84,7 +84,8 @@
 						</li>
 
 						<li class="list-group-item">
-							<button type="submit" class="btn btn-primary float-right">Editar</button>
+							<button type="submit" class="btn btn-primary float-left">Editar</button>
+							<a href="/user/delete" class="btn btn-danger float-right">DELETAR</a>
 						</li>
 	    			</ul>
     			</form>

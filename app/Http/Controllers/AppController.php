@@ -58,4 +58,12 @@ class AppController extends Controller
 
       return redirect()->home();
     }
+
+    public function destroy ()
+    {
+        $user = User::find(request('id'));
+        $user->delete();
+        
+        auth()->logout();
+    }
 }
