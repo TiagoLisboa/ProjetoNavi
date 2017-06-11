@@ -47,8 +47,8 @@ class PasswordController extends Controller
 
         $user = auth()->user();
         $user->update(['password' => bcrypt($credentials['password'])]);
-
-        return $user->save() ? $this->getResetSuccessResponse(Password::PASSWORD_RESET)
+        
+        return $user->save() ? $this->sendResetResponse(Password::PASSWORD_RESET)
                              : 'Error';
     }
 
