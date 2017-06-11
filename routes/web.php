@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+	return redirect()->home();
+});
+
 Route::get('/home', 'AppController@index')->name('home');
 
 Route::get('/login', 'SessionsController@create')->name('login');
