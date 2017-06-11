@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
-class AppController extends Controller
+class UserController extends Controller
 {
 	public function __construct () 
 	{
@@ -27,7 +27,6 @@ class AppController extends Controller
         $this->validate(request(), [
             'name' => 'required'
             , 'email' => 'required|email'
-            // , 'password' => 'required|confirmed'
             , 'cpf' => 'required|regex:([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})'
             , 'rg' => 'required|regex:([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[A-Za-z0-9]{1})'
             , 'birth' => 'required'
@@ -44,7 +43,6 @@ class AppController extends Controller
         $user->update([
             'name' => request('name')
             , 'email' => request('email')
-            // , 'password' => bcrypt(request('password'))
             , 'cpf' => request('cpf')
             , 'rg' => request('rg')
             , 'birth' => request('birth')
