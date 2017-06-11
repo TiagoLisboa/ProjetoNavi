@@ -56,7 +56,7 @@ class AppController extends Controller
             , 'cep' => request('cep')
             ]);
 
-      return redirect()->home();
+      return redirect()->route('dash');
     }
 
     public function destroy ()

@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-	return redirect()->home();
-});
+	return view ('home');
+})->name('home');
 
-Route::get('/user', 'AppController@index')->name('home');
+Route::get('/user', 'AppController@index')->name('dash');
 Route::get('/user/edit', 'AppController@edit');
 Route::patch('/user', 'AppController@update');
 Route::get('/user/delete', function () {

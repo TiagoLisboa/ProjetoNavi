@@ -26,7 +26,7 @@ class SessionsController extends Controller
 	      ]);
 	    }
 
-	    return redirect()->home();
+	    return redirect()->route('dash');;
     }
 
     // Destroy -> logout
