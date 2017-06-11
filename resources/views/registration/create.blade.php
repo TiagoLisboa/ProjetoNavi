@@ -9,6 +9,8 @@
 		<form class="" method="POST" action="/register">
 	      {{ csrf_field() }}
 
+	      @include('layouts.errors')
+
 	      <div class="form-group">
 	        <label for="name">Nome:</label>
 	        <input type="text" name="name" id="name" class="form-control" required>
@@ -97,8 +99,6 @@
 	      <div class="form-group">
 	        <button type="submit" class="btn btn-primary">Registrar</button>
 	      </div>
-
-	      @include('layouts.errors')
 	    </form>
 	</div>
 @endsection
