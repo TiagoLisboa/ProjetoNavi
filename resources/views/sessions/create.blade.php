@@ -25,7 +25,7 @@
 
 	      <div class="form-group">
 	        <button type="submit" class="btn btn-primary">Entrar</button>
-	        <a href="/register" class="float-right">Novo um usuário</a>
+	        <a href="/register" class="float-right">Novo usuário</a>
 	      </div>
 	    </form>
 	</div>
